@@ -1,0 +1,112 @@
+//variables 
+
+@darkgreen: rgb(33, 58, 26);
+@lightgreen: rgb(109, 175, 102);
+@white: rgb(238, 247, 237);
+@border: solid 2px #3d2b1f;
+@piping: #3d2b1f;
+@lines: solid 3px @white;
+
+@fancyfont: 'Expletus Sans', cursive;
+@regfont: 'Gentium Book Basic', sans-serif;
+
+*{
+	margin: 0;
+	padding: 0;
+}
+ html, body{
+ 	height: 100%;
+ 	background-color: black;
+ }
+
+.header{
+	margin: 0 auto;
+	width: 70%;
+	padding-top: 1.5%;
+
+
+	h1{
+	color: @white;
+	font-size: 64px;
+	text-align: center;
+	font-family: @fancyfont;
+    }
+}
+
+.line1{
+	border-top: @lines;
+	width: 400px;
+	margin: 0 auto;
+}
+
+nav{
+	background-color: @lightgreen;
+	width: 75%;
+	height: 10%;
+	margin: 1% auto;
+
+	ul{
+	list-style: none;
+	}
+
+	li{
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 25px;
+	position: relative;
+	}
+
+
+	a{
+	color: @piping;
+	text-decoration: none;
+	font-size: 28px;
+	font-family: @regfont;
+	text-transform: uppercase;
+
+	}
+}
+
+nav a::before{
+	content: '';
+	display: block;
+	height: 5px;
+	width: 0%;
+	background-color: @piping;
+	position: absolute;
+	top: 0;
+	transition: 0.4s;
+}
+
+nav a:hover::before{
+	width: 100%;
+}
+
+.soon{
+	width: 70%;
+	margin: 0 auto;
+	padding-top: 3%;
+
+	h3{
+
+	font-family: @fancyfont;
+	font-size: 38px;
+	text-align: center;
+	color: @white;
+	}
+
+	h2{
+	font-family: @fancyfont;
+	font-size: 42px;
+	text-align: center;
+	color: @lightgreen;
+	}
+
+	a{
+	text-decoration: none;
+	}
+
+
+
+
+}

@@ -1,0 +1,110 @@
+//variables 
+
+@darkgreen: rgb(33, 58, 26);
+@lightgreen: rgb(109, 175, 102);
+@white: rgb(238, 247, 237);
+@border: solid 2px #3d2b1f;
+@piping: #3d2b1f;
+@lines: solid 3px @white;
+
+@fancyfont: 'Expletus Sans', cursive;
+@regfont: 'Gentium Book Basic', sans-serif;
+
+*{
+	margin: 0;
+	padding: 0;
+}
+ html, body{
+ 	height: 100%;
+ 	background-color: black;
+ }
+
+.header{
+	margin: 0 auto;
+	width: 70%;
+	padding-top: 1.5%;
+
+
+	h1{
+	color: @white;
+	font-size: 64px;
+	text-align: center;
+	font-family: @fancyfont;
+    }
+}
+
+.line1{
+	border-top: @lines;
+	width: 400px;
+	margin: 0 auto;
+}
+
+nav{
+	background-color: @lightgreen;
+	width: 70%;
+	height: 10%;
+	margin: 1% auto;
+
+	ul{
+	list-style: none;
+	}
+
+	li{
+	display: inline-block;
+	margin-left: 5px;
+	padding-top: 25px;
+	position: relative;
+	}
+
+
+	a{
+	color: @piping;
+	text-decoration: none;
+	font-size: 32px;
+	font-family: @fancyfont;
+	text-transform: uppercase;
+
+	}
+}
+
+nav a::before{
+	content: '';
+	display: block;
+	height: 5px;
+	width: 0%;
+	background-color: @piping;
+	position: absolute;
+	top: 0;
+	transition: 0.4s;
+}
+
+nav a:hover::before{
+	width: 100%;
+}
+
+
+.toping{
+
+	img{
+	height: 450px;
+	width: 100%;
+	}
+
+}
+
+.words{
+	width: 65%;
+	margin: 1.5% auto;
+
+
+	p{
+	color: @white;
+	font-size: 26px;
+	text-indent: 35px;
+	font-family: @regfont;
+	padding-bottom: 5%;
+
+	}
+}
+
+
